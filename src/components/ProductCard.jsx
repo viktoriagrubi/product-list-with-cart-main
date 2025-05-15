@@ -22,14 +22,12 @@ function ProductCard({
     }
   };
 
-  // Reset all counters (e.g. after "Start new order")
   useEffect(() => {
     if (resetFlag) {
       setQuantity(0);
     }
   }, [resetFlag]);
 
-  // Reset specific product (e.g. when removed from cart with X)
   useEffect(() => {
     if (resetProducts.includes(product.name)) {
       setQuantity(0);

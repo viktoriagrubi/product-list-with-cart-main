@@ -20,7 +20,7 @@ function App() {
       if (existing) {
         if (isRemoval) {
           if (existing.quantity === 1) {
-            setResetProducts((r) => [...r, product.name]); // ➕ dodaj do resetu
+            setResetProducts((r) => [...r, product.name]);
             return prev.filter((item) => item.name !== product.name);
           }
           return prev.map((item) =>
@@ -46,7 +46,7 @@ function App() {
       const existing = prev.find((item) => item.name === product.name);
       if (!existing) return prev;
       if (existing.quantity === 1) {
-        setResetProducts((r) => [...r, product.name]); // ➕ dodaj do resetu
+        setResetProducts((r) => [...r, product.name]);
         return prev.filter((item) => item.name !== product.name);
       }
       return prev.map((item) =>
@@ -61,7 +61,7 @@ function App() {
     setCart([]);
     setConfirmed(false);
     setResetFlag(true);
-    setResetProducts(products.map((p) => p.name)); // resetuj wszystko
+    setResetProducts(products.map((p) => p.name));
     setTimeout(() => {
       setResetFlag(false);
       setResetProducts([]);

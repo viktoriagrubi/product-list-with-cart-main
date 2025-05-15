@@ -81,7 +81,7 @@
 }
 
 .info {
-  background-color: #fdf8f4; /* lub inny kolor tła strony */
+  background-color: #fdf8f4;
   padding: 1rem;
   text-align: center;
 }
@@ -105,8 +105,8 @@
 @media (max-width: 768px) {
   .card {
     width: 100%;
-    max-width: 400px; /* Opcjonalnie, żeby nie była zbyt szeroka */
-    margin: 0 auto; /* Wyśrodkowanie */
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .imageWrapper {
