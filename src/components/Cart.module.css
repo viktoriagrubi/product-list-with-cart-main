@@ -1,0 +1,156 @@
+.cart {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  font-size: 1.3rem;
+  color: #da4c00;
+  margin-bottom: 1rem;
+}
+
+.count {
+  font-weight: bold;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 1rem;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.priceLine {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+.quantity {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.unit,
+.total {
+  color: #777;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #b00020;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.removeBtn:hover {
+  background: #ffeaea;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.deliveryNote {
+  background: #f9f9f9;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.confirm {
+  background-color: #da4c00;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.confirm:hover {
+  background-color: #bb3c00;
+}
+
+.confirmation {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.emptyImage {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.emptyText {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .cart {
+    max-width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .removeBtn {
+    align-self: flex-end;
+  }
+
+  .confirm {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.2rem;
+  }
+}
