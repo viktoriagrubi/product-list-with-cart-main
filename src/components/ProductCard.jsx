@@ -1,45 +1,19 @@
-import { useState, useEffect } from "react";
 import styles from "./ProductCard.module.css";
 
-function ProductCard({
-  product,
-  onAdd,
-  resetFlag,
-  resetProducts,
-  clearResetProduct,
-}) {
-  const [quantity, setQuantity] = useState(0);
-
+function ProductCard({ product, onAdd, quantity }) {
   const handleAdd = () => {
-    setQuantity((q) => q + 1);
-    onAdd(product);
+    onAdd(product, true);
   };
 
   const handleRemove = () => {
-    if (quantity > 0) {
-      setQuantity((q) => q - 1);
-      onAdd({ ...product, quantity: -1 });
-    }
+    onAdd(product, false);
   };
-
-  useEffect(() => {
-    if (resetFlag) {
-      setQuantity(0);
-    }
-  }, [resetFlag]);
-
-  useEffect(() => {
-    if (resetProducts.includes(product.name)) {
-      setQuantity(0);
-      clearResetProduct(product.name);
-    }
-  }, [resetProducts, product.name, clearResetProduct]);
 
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <img
-          src={product.image.thumbnail}
+          src={product.image.desktop}
           alt={product.name}
           className={styles.image}
         />
