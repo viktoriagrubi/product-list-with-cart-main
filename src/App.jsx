@@ -21,17 +21,19 @@ function App() {
     if (existing) {
       if (!isAdd && existing.quantity === 1) {
         setCart(cart.filter((item) => item.name !== product.name));
-      } else {
-        const updatedCart = cart.map((item) =>
-          item.name === product.name
-            ? {
-                ...item,
-                quantity: isAdd ? item.quantity + 1 : item.quantity - 1,
-              }
-            : item
-        );
-        setCart(updatedCart);
+        return;
       }
+
+      const updatedCart = cart.map((item) =>
+        item.name === product.name
+          ? {
+              ...item,
+              quantity: isAdd ? item.quantity + 1 : item.quantity - 1,
+            }
+          : item
+      );
+
+      setCart(updatedCart);
     }
   };
 
